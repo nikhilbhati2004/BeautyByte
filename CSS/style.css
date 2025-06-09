@@ -42,22 +42,30 @@ overflow-x: hidden;
 } */
 
 nav {
-    background-color: #817b7bc4;
+    background-color: #c5bfbf;
 }
 
 header {
     width: 100%;
     height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0.466)), url("../Asset/hero\ image.jpg");
+    background: linear-gradient(rgba(7, 7, 7, 0.274), rgba(233, 231, 231, 0.918), rgba(0, 0, 0, 0.575)), url("../Asset/hero-image.jpg") ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 0 0 30px 60px;
+    overflow-x: hidden;
 }
 
 .hero-icon {
     font-size: 60px;
     color: #000;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: white;
 }
 
 .mybtn {
@@ -134,7 +142,7 @@ header {
 }
 
 .features-box:hover {
-    background-color: rgb(158, 152, 152);
+    background-color: rgba(99, 90, 90, 0.267);
 }
 
 .features-box i {
@@ -171,7 +179,7 @@ header {
     width: 100%;
     padding: 50px 10px;
     margin: 15px 0px;
-    background: linear-gradient(rgba(187, 176, 176, 0.699), rgba(141, 140, 140, 0.466)), url("../Asset/hero\ image.jpg");
+    background: linear-gradient(rgba(255, 253, 253, 0.699), rgba(112, 111, 111, 0.13)), url("../Asset/hero-image.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
