@@ -7,14 +7,21 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* Root variables */
+:root {
+    --main-color: #e91e63;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --btn-color: #ff69b4;
+}
 
-body{
-overflow-x: hidden;
+
+body {
     width: 100%;
 }
 
 
-::selection{
+::selection {
     background-color: rgb(94, 81, 81);
     color: white;
 }
@@ -44,12 +51,14 @@ overflow-x: hidden;
 
 nav {
     background-color: #c5bfbf;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 header {
     width: 100%;
     height: 90vh;
-    background: linear-gradient(rgba(7, 7, 7, 0.274), rgba(233, 231, 231, 0.918), rgba(0, 0, 0, 0.575)), url("../Asset/hero-image.jpg") ;
+    background: linear-gradient(rgba(7, 7, 7, 0.274), rgba(233, 231, 231, 0.918), rgba(0, 0, 0, 0.575)), url("../Asset/hero-image.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -57,29 +66,38 @@ header {
     overflow-x: hidden;
 }
 
+
 .hero-icon {
     font-size: 60px;
     color: #000;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
-a:hover{
+
+a:hover {
     color: white;
 }
 
 .mybtn {
-    background-color: transparent;
-    text-align: center;
-    border: 2px solid rgb(53, 41, 29);
-    padding: 15px 25px;
-    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
 
+.mybtn:hover {
+    background-color: #c2185b;
 }
 
 .mybtnclr {
-    background-color: rgb(49, 8, 8);
+    background-color: black;
 }
 
 .myborder {
@@ -91,25 +109,28 @@ a:hover{
 
 .pricing {
     padding: 20px 0px;
-    background: rgb(158, 155, 155);
+     background: #d8d6d6;
     margin-top: 10px;
     border-radius: 20px;
     transition: all 5s linear;
 }
-.features{
+
+.features {
     padding: 20px 0px;
-    background: rgb(158, 155, 155);
+    background: #d8d6d6;
     margin-top: 10px;
     border-radius: 20px;
     transition: all 5s linear;
 }
-#services{
+
+#services {
     padding: 20px 0px;
-    background: rgb(158, 155, 155);
+     background: #d8d6d6;
     margin-top: 10px;
     border-radius: 20px;
     transition: all 5s linear;
 }
+
 /* #services , .features , .pricing{
 
 } */
@@ -128,32 +149,37 @@ a:hover{
 
 #services button {
     padding: 12px 15px;
-    background: rgb(53, 15, 15);
+    background: var(--main-color);
     color: #fff;
     border: none;
 }
 
 .features-box {
-    /* background-color: salmon; */
+    
     text-align: center;
     padding: 15px;
     border-radius: 15px;
     transition: all 1s ease;
     cursor: pointer;
+    margin-bottom: 30px;
+
+
 }
 
+
 .features-box:hover {
-    background-color: rgba(99, 90, 90, 0.267);
+    background-color: rgb(184, 178, 178);
 }
 
 .features-box i {
     font-size: 50px;
-    color: #fff;
+    color: var(--main-color);
+    margin-bottom: 10px;
     transition: all 1s ease;
 }
 
 .features-box div {
-    background-color: rgb(105, 101, 93);
+  
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -163,20 +189,24 @@ a:hover{
     align-items: center;
 }
 
-.features-box:hover i {
-    transition: all 1s ease;
-    color: #000;
-}
+
 
 .features-box:hover div {
     transition: all 1s ease;
     background-color: whitesmoke;
 }
-.pricing-btn{
-    background-color: rgb(124, 121, 121) ;
-    color: #fff;
+
+.pricing-btn {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
 }
-.customer{
+
+.pricing-btn:hover {
+    background-color: #c2185b;
+}
+
+.customer {
     width: 100%;
     padding: 50px 10px;
     margin: 15px 0px;
@@ -185,35 +215,97 @@ a:hover{
     background-position: center;
     background-size: cover;
 }
-footer{
+
+footer {
     padding: 30px 0 50px 0;
 }
-.foot-icon{
+
+.foot-icon {
     font-size: 20px;
     padding: 5px;
-    background: rgb(207, 158, 109);
-    color: #fff;
+   color: var(--main-color);
+    
     border-radius: 50%;
 }
 
 
 
- /* button top code ----------------------------------------------------  */
-    .topbtn {
-      display: none;
-      cursor: pointer;
-      position: fixed;
-      bottom: 40px;
-      right: 20px;
-      z-index: 999;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgb(78, 76, 76);
-      border: none;
-    }
+/* button top code ----------------------------------------------------  */
+.topbtn {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  background: var(--main-color);
+    border: none;
+}
 
-    .topbtn i {
-      font-size: 1.5vw;
-      color: #fff;
-    }
+.topbtn i {
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+/* @media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .pricing-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-top: 120px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .topbtn {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-box {
+    padding: 15px;
+  }
+
+  .customer h1 {
+    font-size: 1.5rem;
+  }
+
+  .customer p {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .mybtn {
+    width: 100%;
+    margin: 5px 0;
+  }
+} */
